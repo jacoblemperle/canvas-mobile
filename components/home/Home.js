@@ -1,20 +1,24 @@
 import React, {Component} from 'react'
 import {Actions} from 'react-native-router-flux';
 
-import {StyleSheet, Text, View, TextInput} from 'react-native'
+import {StyleSheet, Text, View, TextInput, ScrollView} from 'react-native'
+
+import Course from './Course';
 
 
 class Home extends Component {
 
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.header}>NOOOW Halp</Text>
-                <Text>{this.props.userInput}</Text>
-                <Text onPress={Actions.mainView}> theis is a button</Text>
-                <Text onPress={Actions.settingsView}> theis is a button fur settings</Text>
-                <Text onPress={Actions.matchView}> Match View</Text>
-            </View>
+            <ScrollView>
+                <View style={styles.container}>
+                    <Course />
+                    <Course />
+                    <Course />
+                    <Course />
+                    <Course />
+                </View>
+            </ScrollView>
         )
     }
 }
@@ -22,6 +26,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: '#fff',
+        flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
     },
