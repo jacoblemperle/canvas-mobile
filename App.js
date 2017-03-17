@@ -1,14 +1,22 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { StyleSheet, Text, View } from 'react-native';
+
+import { Scene, Router } from 'react-native-router-flux';
+import store from './store';
+import Home from './components/home/Home';
 
 export default class App extends React.Component {
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>Changes you make will automatically reload.</Text>
-        <Text>Hello</Text>
-      </View>
+      <Provider store={ store }>
+        <Router>
+          <Scene key="root">
+            <Scene key="home" component={ Home } initial={true} />
+
+          </Scene>
+        </Router>
+      </Provider>
     );
   }
 }
