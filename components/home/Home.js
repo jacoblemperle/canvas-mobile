@@ -12,11 +12,14 @@ class Home extends Component {
         return (
             <ScrollView>
                 <View style={styles.container}>
-                    <Course />
-                    <Course />
-                    <Course />
-                    <Course />
-                    <Course />
+                    <Course courseTitle="This is the course title"/>
+                    <Course courseTitle="This is the course title"/>
+                    <Course courseTitle="This is the course title"/>
+                    <Course courseTitle="This is the course title"/>
+                    <Course courseTitle="This is the course title"/>
+                    <Course courseTitle="This is the course title"/>
+                    <Course courseTitle="This is the course title"/>
+                    <Course courseTitle="This is the course title"/>
                 </View>
             </ScrollView>
         )
@@ -29,6 +32,7 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         alignItems: 'center',
         justifyContent: 'center',
+        marginBottom: 35
     },
     header: {
         fontSize: 25,

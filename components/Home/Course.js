@@ -10,7 +10,13 @@ class Course extends Component {
 
         return (
                 <View style={styles.courseContainer}>
-                    <Text>Hey</Text>
+                    <View style={styles.editIcon}>
+                        <Text>Icon</Text>
+                    </View>
+                    <View style={styles.courseTitle}>
+                        <Text>{this.props.courseTitle}</Text>
+                        <Text>{this.props.courseTitle}</Text>
+                    </View>
                     <View style={styles.iconContainer}>
 
                     </View>
@@ -43,6 +49,14 @@ const styles = StyleSheet.create({
         position: 'absolute',
         bottom: 0,
         left: 0
+    },
+    editIcon: {
+        flex: 1,
+        width
+    },
+    courseTitle: {
+        flex: 1,
+        width,
     }
 });
 
